@@ -40,9 +40,9 @@ class MemberTest {
         //확인
         List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
 
-        for (Member member : members) {
+        members.stream().forEach(member -> {
             System.out.println("member = " + member);
             System.out.println("member.getTeam() = " + member.getTeam());
-        }
+        });
     }
 }
