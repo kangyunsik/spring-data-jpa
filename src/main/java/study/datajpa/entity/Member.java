@@ -18,15 +18,15 @@ public class Member {
     @GeneratedValue
     @Column(name = "member_id")
     private Long id;
-    private String userName;
+    private String username;
     private int age;
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "team_id")
     private Team team;
 
-    public Member(String userName) {
-        this.userName = userName;
+    public Member(String username) {
+        this.username = username;
     }
 
     public Member(String member, int age, Team team) {

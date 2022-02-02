@@ -11,7 +11,6 @@ import java.util.List;
 
 @SpringBootTest
 @Transactional
-@Rollback(value = false)
 class MemberTest {
 
     @PersistenceContext
