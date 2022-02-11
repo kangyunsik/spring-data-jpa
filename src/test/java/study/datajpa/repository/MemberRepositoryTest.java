@@ -269,4 +269,9 @@ public class MemberRepositoryTest {
         List<Member> result = memberRepository.findLockByUsername("member1");
     }
 
+    @Test
+    public void callCustom(){
+        List<Member> memberCustom = memberRepository.findMemberCustom();
+    }
+
 }
